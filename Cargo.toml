@@ -1,0 +1,20 @@
+[package]
+name = "webp-perf"
+version = "0.1.0"
+edition = "2024"
+
+[profile.profiling]
+inherits = "release"
+debug = true
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+image-webp = "0.2.4"
+webp = "0.3.1"
+
+[dev-dependencies]
+criterion = { version = "0.7", features = ["html_reports"] }
+
+[[bench]]
+name = "lossy_images"
+harness = false
