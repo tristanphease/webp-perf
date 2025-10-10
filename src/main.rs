@@ -1,6 +1,8 @@
 use std::{fs, io::Cursor};
 use clap::{Parser, ValueEnum};
 
+mod arithmetic_decoder;
+
 fn main() {
     let args = Args::parse();
 
